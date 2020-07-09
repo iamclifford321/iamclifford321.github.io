@@ -1,0 +1,822 @@
+body{
+      min-height: 100vh !important;
+}
+div.CU-div-items{
+      margin-right: 20em;
+}
+h2{
+      font-size: 5em;
+      font-weight: 800;
+}
+p{
+      font-size: larger;
+}
+div.CU-logo-header{
+      margin-left: 20em;
+}
+div.CU-div-items ul li{
+      display: inline;
+}
+div.CU-div-items ul li a{
+      margin: 15px;
+      padding: 7px 2px;
+      color: white !important;
+      position: relative;
+      font-size: larger;
+      cursor: pointer;
+      z-index: 11;
+}
+div.CU-div-items ul li a:hover{
+      text-decoration: none;
+}
+div.CU-div-items ul li a::after{
+      content: '';
+      position: absolute;
+      bottom: 42%;
+      left: 0px;
+      height: 2px;
+      width: 0;
+      background-color: white;
+      transition: .3s;
+}
+div.CU-div-items ul li a:hover::after{
+      width: 100%;
+}
+div.CU-div-items ul{
+      padding: 0px;
+      margin: 0px;
+}
+nav.CU-Header-Pad{
+      padding-top: 2em;
+      padding-bottom: 1em;
+      background-color: rgba(79, 169, 171, 1);
+}
+div.CU-div-content-home{
+      /* background-image: url('../image/undraw_empty_street_sfxm.png'); */
+      background-repeat: no-repeat;
+      background-position: center;
+}
+div.CU-div-content-inner-home{
+      background-color: rgba(255, 255, 255,.77);
+      padding: 5em 20em;
+}
+div.CU-div-content-inner-home h2{
+      text-align: left;
+      font-size: 5em;
+      font-weight: 800;
+}
+div.CU-div-content-inner-home p{
+      margin-top: 4em;
+      text-align: left;
+      font-size: larger;
+      /* padding: 0px 10em; */
+      padding-right: 20em;
+}
+.CU-button-contact-me{
+      text-align: left;
+      padding-top: 3em;
+      
+}
+.CU-button-contact-me a{
+      cursor: pointer;
+      padding: 15px 30px;
+      /* background-color: rgba(79, 169, 171, 1); */
+      background-color: none;
+      border-radius: 5px;
+      color: black !important;
+      position: relative;
+      border: 2px solid black;
+      transition: .3s;
+      font-weight: 700;
+}
+div.CU-inner-content-about-name h3{
+      color: white;
+      font-size: 2.5em;
+      font-weight: 800;
+      margin-bottom: 1em;
+}
+div.CU-inner-content-about-name p{
+      color: white;
+}
+div.CU-inner-content-about-education h3 {
+      font-weight: 700;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      position: relative;
+      color: white;
+}
+div.CU-inner-div-skills h3{
+      font-weight: 700;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      position: relative;
+      color: black;
+}
+div.CU-inner-div-skills h3:after{
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      background-color: black;
+      height: 2px;
+      width: 100px;
+}
+div.CU-inner-content-about-education h3:after{
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      background-color: white;
+      height: 2px;
+      width: 100px;
+}
+div.CU-inner-content-about-education p small{
+      /* font-style: italic; */
+      position: relative;
+      color: white;
+      
+}
+div.CU-inner-content-about-education b{
+      color: white;
+}
+/* div.CU-inner-content-about-education p small:after{
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: black;
+      top: 55%;
+      z-index: -1;
+      left: 0px;
+      transform: rotate(2deg);
+} */
+div.CU-inner-pic-about, div.CU-pic-about{
+      
+      height: 100%;
+}
+div.CU-inner-pic-about img{
+      position: relative;
+      top: 10px;
+}
+div.CU-about{
+      background-color: rgba(79, 169, 171, 1);
+      padding: 6em 20em 10em 20em;
+      
+}
+div.CU-inner-pic-about img{
+      width: 500px;
+}
+div.CU-inner-content-about-name{
+      margin-bottom: 50px;
+}
+div.CU-inner-content-about{
+      position: relative;
+      top: 115px;
+}
+div.CU-button-resume{
+      margin-top: 40px;
+}
+div.CU-button-resume a{
+      cursor: pointer;
+      padding: 15px 30px;
+      /* background-color: rgba(79, 169, 171, 1); */
+      background-color: none;
+      border-radius: 5px;
+      color: white !important;
+      position: relative;
+      transition: .3s;
+      border: 1px solid white;
+}
+div.CU-button-resume a:hover{
+      background-color: rgba(255,255,255, .1);
+      color: white !important;
+      
+}
+div.CU-div-skills{
+      
+
+}
+div.CU-inner-div-skills{
+      padding: 6em 20em 10em 20em;
+}
+div.outer{
+
+      width: 100%;
+      background-color: rgb(62 136 138);
+      margin: 20px 0px;
+      height: 40px;
+      border-radius: 3px;
+      line-height: 40px;
+
+}
+div.html .inner{
+      height: 100%;
+      width: 80%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      
+      -webkit-animation: html 2s  ease-in-out;
+      -moz-animation:    html 2s  ease-in-out;
+      -o-animation:      html 2s  ease-in-out;
+      animation:         html 2s  ease-in-out;
+      
+}
+
+@keyframes html{
+      from{ width: 0%;}
+      to{ width: 80%;}
+}
+div.css .inner{
+      height: 100%;
+      width: 85%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: css 2s  ease-in-out;
+      -moz-animation:    css 2s  ease-in-out;
+      -o-animation:      css 2s  ease-in-out;
+      animation:         css 2s  ease-in-out;
+      
+}
+@keyframes css{
+      from{ width: 0%;}
+      to{ width: 85%;}
+}
+div.jquery .inner{
+      height: 100%;
+      width: 70%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: jquery 2s  ease-in-out;
+      -moz-animation:    jquery 2s  ease-in-out;
+      -o-animation:      jquery 2s  ease-in-out;
+      animation:         jquery 2s  ease-in-out;
+      
+}
+@keyframes jquery{
+      from{ width: 0; }
+      to{ width: 70%; }
+}
+div.php .inner{
+      height: 100%;
+      width: 60%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: php 2s  ease-in-out;
+      -moz-animation:    php 2s  ease-in-out;
+      -o-animation:      php 2s  ease-in-out;
+      animation:         php 2s  ease-in-out;
+      
+}
+@keyframes php{
+      from{ width: 0; }
+      to{ width: 60%; }
+}
+div.codeigniter .inner{
+      height: 100%;
+      width: 50%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: codeigniter 2s  ease-in-out;
+      -moz-animation:    codeigniter 2s  ease-in-out;
+      -o-animation:      codeigniter 2s  ease-in-out;
+      animation:         codeigniter 2s  ease-in-out;
+      
+}
+
+@keyframes codeigniter{
+      from{ width: 0; }
+      to{ width: 50%; }
+}
+
+div.laravel .inner{
+      height: 100%;
+      width: 43%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: laravel 2s  ease-in-out;
+      -moz-animation:    laravel 2s  ease-in-out;
+      -o-animation:      laravel 2s  ease-in-out;
+      animation:         laravel 2s  ease-in-out;
+}
+
+@keyframes laravel{
+      from{ width: 0; }
+      to{ width: 43%; }
+}
+
+
+div.salesforce .inner{
+      height: 100%;
+      width: 50%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: salesforce 2s  ease-in-out;
+      -moz-animation:    salesforce 2s  ease-in-out;
+      -o-animation:      salesforce 2s  ease-in-out;
+      animation:         salesforce 2s  ease-in-out;
+      
+}
+
+@keyframes salesforce{
+      from{ width: 0; }
+      to{ width: 50%; }
+}
+
+
+
+div.react .inner{
+      height: 100%;
+      width: 20%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: react 2s  ease-in-out;
+      -moz-animation:    react 2s  ease-in-out;
+      -o-animation:      react 2s  ease-in-out;
+      animation:         react 2s  ease-in-out;
+      
+}
+
+
+@keyframes react{
+      from{ width: 0; }
+      to{ width: 20%; }
+}
+
+
+div.angular .inner{
+      height: 100%;
+      width: 30%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: angular 2s  ease-in-out;
+      -moz-animation:    angular 2s  ease-in-out;
+      -o-animation:      angular 2s  ease-in-out;
+      animation:         angular 2s  ease-in-out;
+      
+}
+
+@keyframes angular{
+      from{ width: 0; }
+      to{ width: 30%; }
+}
+
+
+div.nodeJs .inner{
+      height: 100%;
+      width: 15%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: nodeJs 2s  ease-in-out;
+      -moz-animation:    nodeJs 2s  ease-in-out;
+      -o-animation:      nodeJs 2s  ease-in-out;
+      animation:         nodeJs 2s  ease-in-out;
+      
+}
+
+@keyframes nodeJs{
+      from{ width: 0; }
+      to{ width: 15%; }
+}
+
+
+
+div.cpp .inner{
+      height: 100%;
+      width: 20%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: cpp 2s  ease-in-out;
+      -moz-animation:    cpp 2s  ease-in-out;
+      -o-animation:      cpp 2s  ease-in-out;
+      animation:         cpp 2s  ease-in-out;
+      
+}
+
+@keyframes cpp{
+      from{ width: 0; }
+      to{ width: 20%; }
+}
+
+div.bootstrap .inner{
+      height: 100%;
+      width: 87%;
+      background-color: rgb(35 37 39);
+      border-radius: 3px;
+      -webkit-animation: bootstrap 2s  ease-in-out;
+      -moz-animation:    bootstrap 2s  ease-in-out;
+      -o-animation:      bootstrap 2s  ease-in-out;
+      animation:         bootstrap 2s  ease-in-out;
+      
+}
+
+
+@keyframes bootstrap{
+      from{ width: 0; }
+      to{ width: 87%; }
+}
+.inner{
+
+      background-color: #204d4e !important;
+
+}
+div.outer .inner span{
+      margin-left: 20px;
+      color: white
+}
+div#CU-mouse-costumizer{
+
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba( 0, 0, 0,.5 );
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      border-radius: 100%;
+      z-index: 1001;
+      backdrop-filter: blur(2px);
+      transition: .1s;
+
+}
+div.CU-works{
+      padding: 6em 20em 10em 20em;
+}
+div.CU-inner-label-about-me h1{
+      text-align: center;
+      font-weight: bold;
+      font-size: 3em;
+      color: white;
+
+}
+div.CU-label-about-me{
+      padding: 5em 0;
+      background-color: rgba(79, 169, 171, 1);;
+}
+div.CU-inner-label-about-me{
+      
+      position: relative;
+}
+
+div.CU-inner-label-about-me p{
+      color: white;
+      font-weight: 700;
+      text-align: center;
+}
+div.CU-inner-projects div.card{
+      border: none !important;
+      box-shadow: 0px 0px 20px 1px rgb(94 98 119 / 10%);    
+      margin-top: 30px;
+      transition: .3s;
+}
+div.CU-inner-projects div.card div.card-body {
+      padding: 2.25rem;
+}
+div.CU-inner-projects div.card div.card-body .card-title {
+      font-weight: 600;
+}
+
+div.CU-inner-projects div.card:hover{
+      box-shadow: 0px 0px 20px 1px rgba(94, 98, 119, 0.31);
+}
+
+.btn-custom-CU-poeject{
+      color: white;
+      background-color: rgba(79, 169, 171, 1);
+      z-index: 11;
+}
+.btn-custom-CU-poeject:hover{
+      color: white;
+}
+.btn-custom-CU-poeject-download{
+      color: rgba(79, 169, 171, 1);
+      font-weight: bold;
+      z-index: 11;
+      bottom: 0px;
+}
+div.CU-inner-projects, div.CU-projects{
+      height: 100%;
+}
+
+/* div.CU-div-downolad-and-view{
+      position: absolute;
+}
+div.CU-inner-projects div.card div.card-body{
+      position: relative;
+
+} */
+div.CU-icons-footer{
+      position: absolute;
+      bottom: 0px;
+}
+div.CU-outer-icons-footer{
+      height: 100%;
+      position: relative;
+}
+div.CU-icons-footer a.CU-icons-a{
+      display: block;
+      font-size: 30px;
+      text-align: center;
+      color: #394242;
+      margin-top: 25px;
+     
+}
+div.CU-icons-footer a.CU-icons-a:hover{
+      color: rgba(79, 169, 171, 1);
+}
+div.CU-contact div.CU-form {
+      padding: 6em 20em 10em 20em;
+}
+button.CU-btn-submit{
+      background-color: rgba(79, 169, 171, 1);
+      color: white;
+}
+button.CU-btn-submit:hover{
+      background-color: rgba(79, 169, 171, .8);
+      color: white;
+}
+div.contact-form{
+      padding: 0em 1em;
+}
+div.CU-Menu-btn a{
+      color: white !important;
+      font-size: 2em;
+      cursor: pointer;
+      display: none;
+}
+div.CU-Outer-Phone{
+      position: relative;
+      display: none;
+}
+div.CU-Outer-Phone div.CU-Inner-Phone{
+      background-color: rgba(79, 169, 171, 1);
+      
+      width: 100vw;
+}
+div.CU-Inner-Phone ul{
+      margin: 0px;
+      padding: 0px;
+      
+}
+div.CU-Inner-Phone ul li{
+      list-style-type: none;
+      padding: .5em 0px;
+}
+div.CU-Inner-Phone ul li a{
+      margin: 0px;
+      font-size: larger;
+      color: white !important;
+      cursor: pointer;
+      padding-left: 2em;
+      
+
+}
+div.CU-Menu-btn{
+      display: none;
+}
+
+
+div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page{
+      display: none;
+}
+div.CU-home-pages{
+      display: block;
+}
+/* 
+
+      ------------------------------------------------------------------------------------------------------------------------------------------------------------
+     ------------------------------------------------------ Here starts the responsive styling----------------------------------------------------------------------
+      -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*/
+
+@media screen and (max-width: 1474px) {
+      div.CU-div-content-inner-home p{
+            padding-right: 10em;
+      }
+
+      div.CU-works {
+            padding: 6em 10em 10em 10em;
+      }
+      div.CU-about {
+            background-color: rgba(79, 169, 171, 1);
+            padding: 6em 10em 10em 10em;
+      }
+      div.CU-inner-div-skills {
+            padding: 6em 10em 10em 10em;
+      }
+      div.CU-div-content-inner-home {
+            background-color: rgba(255, 255, 255,.77);
+            padding: 5em 14em;
+      }
+      div.CU-div-items {
+            margin-right: 10em;
+      }
+      div.CU-logo-header {
+            margin-left: 10em;
+      }
+}
+
+@media screen and (max-width: 1300px) {
+      div.CU-inner-pic-about img {
+            width: 400px;
+      }
+      div.CU-inner-content-about {
+            position: relative;
+            top: 39px;
+      }
+      div.CU-works {
+            padding: 6em 7em 10em 7em;
+      }
+      div.CU-contact div.CU-form {
+            padding: 6em 15em 10em 15em;
+      }
+}
+@media screen and (max-width: 1084px) {
+      div.CU-div-content-inner-home {
+            background-color: rgba(255, 255, 255,.77);
+            padding: 5em 10em;
+      }
+
+      div.CU-about {
+            background-color: rgba(79, 169, 171, 1);
+            padding: 6em 6em 10em 6em;
+      }
+      div.CU-works {
+            padding: 6em 5em 10em 5em;
+      }
+      div.CU-inner-div-skills {
+            padding: 6em 7em 10em 7em;
+      }
+}
+
+
+@media screen and (max-width: 991px) {
+      div.CU-inner-content-about-name p {
+            color: white;
+            text-align: center;
+            padding: 0px 3em;
+      }
+      div.CU-button-resume {
+            margin-top: 40px;
+            text-align: center;
+      }
+      div.CU-inner-content-about-name h3 {
+            color: white;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 1em;
+            text-align: center;
+      }
+      div.CU-inner-pic-about, div.CU-pic-about {
+            height: 100%;
+            text-align: center;
+      }
+}
+
+@media screen and (max-width: 957px) {
+      div.CU-div-content-inner-home {
+            background-color: rgba(255, 255, 255,.77);
+            padding: 5em 5em;
+      }
+      div.CU-logo-header {
+            margin-left: 5em;
+      }
+      div.CU-div-items {
+            margin-right: 5em;
+      }
+      div.CU-contact div.CU-form {
+            padding: 6em 6em 10em 6em;
+      }
+      div.CU-inner-div-skills {
+            padding: 6em 5em 10em 5em;
+      }
+}
+
+@media screen and (max-width: 796px) {
+      div.CU-div-content-inner-home h2 {
+            text-align: left;
+            font-size: 4em;
+            font-weight: 800;
+      }
+      div.CU-div-content-inner-home p {
+            padding-right: 5em;
+      }
+}
+
+@media screen and (max-width: 675px) {
+      div.CU-logo-header {
+            margin-left: 1em;
+      }
+      div.CU-div-items {
+            margin-right: 1em;
+      }
+      div.CU-div-content-inner-home p {
+            padding-right: 2em;
+      }
+      div.CU-about {
+            background-color: rgba(79, 169, 171, 1);
+            padding: 6em 3em 10em 3em;
+      }
+      div.CU-inner-content-about-name p {
+            color: white;
+            text-align: center;
+            padding: 0px 1em;
+      }
+      div.CU-contact div.CU-form {
+            padding: 7em 3em 8em 3em;
+      }
+
+      
+}
+
+@media screen and (max-width: 575px) {
+
+      
+      div.CU-icons-footer {
+            position: relative;
+            bottom: 0px;
+            margin-top: 2em;
+      }
+      div.CU-icons-footer a.CU-icons-a {
+            display: inline;
+            font-size: 30px;
+            text-align: center;
+            color: #394242;
+            margin-right: 25px;
+      }
+      div.CU-div-content-inner-home {
+            background-color: rgba(255, 255, 255,.77);
+            padding: 5em 2em;
+      }
+      div.CU-div-content-inner-home p {
+            padding-right: 0;
+      }
+      
+}
+
+@media screen and (max-width: 536px) {
+
+      div.CU-div-content-inner-home h2 {
+            text-align: left;
+            font-size: 3.5em;
+            font-weight: 800;
+      }
+      div.CU-div-content-inner-home p {
+            margin-top: 2em;
+      }
+      div.CU-works {
+            padding: 6em 2em 10em 2em;
+      }
+
+      
+}
+
+
+
+@media screen and (max-width: 478px) {
+
+
+      nav.CU-Header-Pad {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            background-color: rgba(79, 169, 171, 1);
+      }
+      div.CU-logo-header {
+            margin-left: 1em;
+            margin-bottom: 1em;
+      }
+      div.CU-div-items {
+            margin-right: 0em;
+      }
+      div.CU-Menu-btn{
+            display: block;
+      }
+      
+}
+@media screen and (max-width: 419px) {
+
+      div.CU-div-items {
+            display: none;
+      }
+      div.CU-logo-header {
+            margin-left: 1em;
+            margin-bottom: 0em;
+      }
+      div.CU-Menu-btn a{
+  
+            display: block;
+      }
+      
+
+      
+}
+
+
+
+
+
+
+
+
+
+
