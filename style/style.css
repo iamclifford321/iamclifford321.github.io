@@ -433,7 +433,7 @@ div#CU-mouse-costumizer{
       left: 50%;
       border-radius: 100%;
       z-index: 1001;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(5px);
       transition: .1s;
 
 }
