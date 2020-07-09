@@ -517,7 +517,7 @@
 
         if( $(this).text() == 'Home' || $(this).text() == 'About' || $(this).text() == 'Works' || $(this).text() == 'Contact' ){
 
-            window.history.pushState( "object or string", "", "/portfolio/?page=" + $(this).text() );
+            window.history.pushState( "object or string", "", "?page=" + $(this).text() );
             var urls = location.href.split( '=' );
             if($(this).text() == 'About' || $(this).text() == 'Works' || $(this).text() == 'Contact'){
               $('div.CU-svg-nav svg path').attr('d','M-0.27,-9.38 C520.59,-86.34 578.72,-179.11 501.97,375.48 L500.00,150.00 L0.00,150.00 Z')
