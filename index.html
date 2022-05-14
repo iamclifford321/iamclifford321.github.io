@@ -561,11 +561,12 @@
   </body>
   <script>
     $(document).ready(function(){
-      window.history.pushState( "object or string", '', '?page=Home' )
+      
       const queryString = window.location.search;
         if(queryString.get('page') == "message"){
-            ChangeContent( 'message' );
+            ChangeContent( 'message');
         }else{
+            window.history.pushState( "object or string", '', '?page=Home' )
             ChangeContent( 'Home' );
         }
       
