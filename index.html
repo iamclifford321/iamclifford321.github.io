@@ -562,7 +562,13 @@
   <script>
     $(document).ready(function(){
       window.history.pushState( "object or string", '', '?page=Home' )
-      ChangeContent( 'Home' );
+      const queryString = window.location.search;
+        if(queryString.get('page') == "message"){
+            ChangeContent( 'message' );
+        }else{
+            ChangeContent( 'Home' );
+        }
+      
       $(document).on('click', '.CU-li-a', function(){
 
         // div.CU-works-page, div.CU-about-page, div.CU-home-page, div.CU-contact-page
