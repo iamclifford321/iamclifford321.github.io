@@ -563,12 +563,13 @@
     $(document).ready(function(){
       
       const queryString = window.location.search;
-      console.log(queryString);
-        if(queryString.get('page') == "message"){
+      const urlParams = new URLSearchParams(queryString);
+   
+        if(urlParams.get('page') == "message"){
             ChangeContent( 'message');
             alert('messagew');
         }else{
-            //window.history.pushState( "object or string", '', '?page=Home' )
+            window.history.pushState( "object or string", '', '?page=Home' )
             ChangeContent( 'Home' );
         }
       
