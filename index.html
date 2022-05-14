@@ -567,9 +567,9 @@
    
         if(urlParams.get('page') == "message"){
             ChangeContent( 'message');
-            alert('messagew');
+
         }else{
-           // window.history.pushState( "object or string", '', '?page=Home' )
+            window.history.pushState( "object or string", '', '?page=Home' )
             ChangeContent( 'Home' );
         }
       
@@ -596,16 +596,16 @@
         //$('.CU-main-div').load( 'pages/' + page + '.html' );
         console.log( page );
         if( page == 'Home'){
-          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page').css('display','none')
+          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page, div.CU-message').css('display','none')
           $('div.CU-home-pages').css('display','block')
         }else if(page == 'About'){
-          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page').css('display','none')
+          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page, div.CU-message').css('display','none')
           $('div.CU-abouts-page').css('display','block')
         }else if( page == 'Works' ){
-          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page').css('display','none')
+          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page, div.CU-message').css('display','none')
           $('div.CU-works-pages').css('display','block')
         }else if( page == 'Contact' ){
-          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page').css('display','none')
+          $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page, div.CU-message').css('display','none')
           $('div.CU-contact-pages').css('display','block')
         }else if(page=='message'){
             $('div.CU-contact-pages, div.CU-home-pages,div.CU-works-pages,div.CU-abouts-page').css('display','none')
