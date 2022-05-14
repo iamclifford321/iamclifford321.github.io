@@ -565,6 +565,7 @@
       const queryString = window.location.search;
         if(queryString.get('page') == "message"){
             ChangeContent( 'message');
+            alert('messagew');
         }else{
             window.history.pushState( "object or string", '', '?page=Home' )
             ChangeContent( 'Home' );
