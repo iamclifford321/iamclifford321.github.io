@@ -26,7 +26,8 @@
       $(document).ready(function(){
         const message = 'Hello from Origin 1!';
         const targetOrigin = 'https://iamclifford321.github.io';
-        window.postMessage(message, targetOrigin);
+        const iframe = document.querySelector("iframe");
+        iframe.contentWindow.postMessage(message, targetOrigin);
       })
     </script>
 
