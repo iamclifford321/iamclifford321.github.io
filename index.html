@@ -23,9 +23,11 @@
     <button id="sendMessage">Send Message</button>
   </div>
   <script>
-    $(document).ready(function(){
-
-    })
+    $( window ).on( "load", function() {
+      const message = "test";
+      const iframe = document.querySelector("iframe");
+      iframe.contentWindow.postMessage(message, "https://test-cliff.w3spaces.com");
+    });
     var button = document.querySelector("#sendMessage");
   
     function sendMessage() {
