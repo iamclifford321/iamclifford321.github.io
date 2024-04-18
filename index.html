@@ -24,7 +24,9 @@
     </div>
     <script>
       $(document).ready(function(){
-        alert();
+        const message = 'Hello from Origin 1!';
+        const targetOrigin = 'https://iamclifford321.github.io';
+        window.postMessage(message, targetOrigin);
       })
     </script>
 
