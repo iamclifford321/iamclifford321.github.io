@@ -18,18 +18,24 @@
 
 <!-- Start Test -->
 
-    <div>
-
-      <iframe src="https://test-cliff.w3spaces.com/index.html" frameborder="0"></iframe>
-    </div>
-    <script>
-      $(document).ready(function(){
-        const message = 'Hello from Origin 1!';
-        const targetOrigin = 'https://iamclifford321.github.io';
-        const iframe = document.querySelector("iframe");
-        iframe.contentWindow.postMessage(message, targetOrigin);
-      })
-    </script>
+<div id="app">
+    <input id="message" type="text" />
+    <button id="sendMessage">Send Message</button>
+  </div>
+  <script>
+    var button = document.querySelector("#sendMessage");
+  
+    function sendMessage() {
+      const message = document.querySelector("#message").value;
+      const iframe = document.querySelector("iframe");
+      iframe.contentWindow.postMessage(message, "*");
+    }
+  
+    button.addEventListener("click", sendMessage);
+  </script>
+  
+  <iframe src="https://test-cliff.w3spaces-preview.com/index.html"></iframe>
+    
 
 <!-- END Test -->
     <nav class="navbar CU-Header-Pad">
