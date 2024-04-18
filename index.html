@@ -24,14 +24,14 @@
   </div>
   <script>
     $(document).ready(function(){
-      const message = "test";
-      const iframe = document.querySelector("iframe");
-      iframe.contentWindow.postMessage(message, "*");
+
     })
     var button = document.querySelector("#sendMessage");
   
     function sendMessage() {
-
+      const message = "test";
+      const iframe = document.querySelector("iframe");
+      iframe.contentWindow.postMessage(message, "*");
     }
   
     button.addEventListener("click", sendMessage);
