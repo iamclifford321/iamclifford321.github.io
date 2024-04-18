@@ -31,7 +31,7 @@
     function sendMessage() {
       const message = "test";
       const iframe = document.querySelector("iframe");
-      iframe.contentWindow.postMessage(message, "*");
+      iframe.contentWindow.postMessage(message, "https://test-cliff.w3spaces.com");
     }
   
     button.addEventListener("click", sendMessage);
