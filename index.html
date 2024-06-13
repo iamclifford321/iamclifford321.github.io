@@ -16,12 +16,11 @@
   
 	  <!-- Start Test -->
 
-	  <script type='text/javascript'>
+	<script type='text/javascript'>
 		function initEmbeddedMessaging() {
 			try {
-				alert();
 				embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-				
+	
 				embeddedservice_bootstrap.init(
 					'00D3z000002ubW0',
 					'Creditfix_Live_Chat',
@@ -30,14 +29,13 @@
 						scrt2URL: 'https://ukdebtexpert.my.salesforce-scrt.com'
 					}
 				);
-				console.log("test test");
 			} catch (err) {
 				console.error('Error loading Embedded Messaging: ', err);
 			}
 		};
 	</script>
 	<script type='text/javascript' src='https://ukdebtexpert.my.site.com/ESWCreditfixLiveChat17135350735031/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-	    
+	
 
 	<!-- END Test -->
 	  
