@@ -1,20 +1,87 @@
-	<script type='text/javascript'>
-		function initEmbeddedMessaging() {
-			try {
-				embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			var cnames = ["utm_campaign", "PageSource", "SourceType", "stage_of_debt"]; // cookies
+            var cokSpec = getCookie(cnames); // get the cookies
+            console.log('Cookies::')
+            console.log(cokSpec)
+            const website = window.location.hostname; // the the website Hostname
+            // Set values to predefined fields
+            var url_string = window.location.href; 
+            var url = new URL(url_string);
+            var fName = url.searchParams.get("fName"); 
+            var lName = url.searchParams.get("lName"); 
+            var phone = url.searchParams.get("phone"); 
+            var email = url.searchParams.get("email");
+
+			window.addEventListener("onEmbeddedMessagingReady", () => {
+                console.log("Received the onEmbeddedMessagingReady event...");
+                embeddedservice_bootstrap.prechatAPI.setVisiblePrechatFields({
+                    "_firstName": {
+                        "value": fName,
+                        "isEditableByEndUser": true
+                    },
+                    "_lastName": {
+                        "value": lName,
+                        "isEditableByEndUser": true
+                    },
+                    "_email": {
+                        "value": email,
+                        "isEditableByEndUser": true
+                    },
+                    "Phone Number": {
+                        "value": phone,
+                        "isEditableByEndUser": true
+                    }
+            	});
+		        // Set values to hidden fields
+                embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"CampaignUTM" : cokSpec.utm_campaign});
+                embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"SourceCode" : cokSpec.PageSource});
+                embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"SourceType" : cokSpec.SourceType});
+                embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"StageofDebt" : cokSpec.stage_of_debt});
+                embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({"Website" : website});
+        	});
+
+
+
+			embeddedservice_bootstrap.init(
+				'00D3z000002ubW0',
+				'Creditfix_Live_Chat',
+				'https://ukdebtexpert.my.site.com/ESWCreditfixLiveChat17135350735031',
+				{
+					scrt2URL: 'https://ukdebtexpert.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+
+	  function getCookie(cookieNames) {
+        let ca = document.cookie.split(';');
+        let cookieMapped = {};
+        for (const inc in cookieNames) {
+            let cName = cookieNames[inc] + "=";
+            for(let i = 0; i < ca.length; i++) {
+                let cookie = ca[i];
+                while (cookie.charAt(0) == ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(cName) == 0) {
+                    cookieMapped[cookieNames[inc]] = cookie.substring(cName.length, cookie.length);
+                }
+            }
+        }
+        return cookieMapped;
+    }
+    
+    // self executing function here
+    (function() {
+        // alert();        
+    })();
 	
-				embeddedservice_bootstrap.init(
-					'00D3z000002ubW0',
-					'Creditfix_Live_Chat',
-					'https://ukdebtexpert.my.site.com/ESWCreditfixLiveChat17135350735031',
-					{
-						scrt2URL: 'https://ukdebtexpert.my.salesforce-scrt.com'
-					}
-				);
-			} catch (err) {
-				console.error('Error loading Embedded Messaging: ', err);
-			}
-		};
-	</script>
-	<script type='text/javascript' src='https://ukdebtexpert.my.site.com/ESWCreditfixLiveChat17135350735031/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 	
+</script>
+<script type='text/javascript' src='https://ukdebtexpert.my.site.com/ESWCreditfixLiveChat17135350735031/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
