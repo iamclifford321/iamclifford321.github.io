@@ -7,6 +7,13 @@
 <body>
 	<table id="table">
 	</table>
+	<br>
+	<br>
+
+	<label for="">Account Name</label>
+	<input type="text" id="Name">
+	<br>
+
 	<button onclick="createNewAccount()">click Me</button> 
 </body>
 <script>
@@ -57,9 +64,14 @@
 getAllAccounts();	
 
 function createNewAccount() {
-	
+	var name = document.getElementById("Name").value;
+	if (name == "" || name == null || name == undefined || name == NaN){
+		alert("Please enter a name");
+		return;
+	}
+	console.log(name)
 	const newAccountData = {
-		"Name": "New Account",
+		"Name": name,
 		"Industry": "Technology",
 		"Type": "Prospect",
 		"BillingCity": "San Francisco"
@@ -89,6 +101,6 @@ function createNewAccount() {
 	});
 }
 
- 
+
 </script>
 </html>
