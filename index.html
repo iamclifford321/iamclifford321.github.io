@@ -38,7 +38,7 @@
 getAllAccounts();	
 
 function createNewAccount() {
-	alert();
+	
 	const newAccountData = {
 		"Name": "New Account",
 		"Industry": "Technology",
@@ -62,6 +62,7 @@ function createNewAccount() {
 	.then(data => {
 		// Handle the success response
 		console.log('Account created:', data);
+		alert('Account Created');
 	})
 	.catch(error => {
 		// Handle any errors
