@@ -94,6 +94,7 @@ function createNewAccount() {
 		// Handle the success response
 		console.log('Account created:', data);
 		alert('Account Created');
+		window.location.reload();
 	})
 	.catch(error => {
 		// Handle any errors
