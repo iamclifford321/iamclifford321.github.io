@@ -1,4 +1,44 @@
-terst
-<script type='text/javascript'>
-	console.log('testing');
-</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	        <title>Test</title>
+	</head>
+	<script>
+			// Salesforce REST API Endpoint
+			const apiEndpoint = 'https://orgfarm-1ad1efddcb-dev-ed.develop.my.salesforce.com/services/apexrest/accounts/';
+	
+			// Authentication Token (OAuth token from Salesforce authentication)
+			const accessToken = '00DgK000001W5yE!AQEAQGSFhUm1ibF.sU8tq6kH2Qovb0aOSdtYYv_GficLH1gVJ4sfwbjmbG4_EovKTFcFlMRH70go6iqo7FJPbmXT8W09FOK6';
+		
+			// Function to call the Apex REST API and fetch Accounts
+			function getAllAccounts() {
+				// Create the headers object with Authorization Bearer token
+				const headers = {
+					'Authorization': `Bearer ${accessToken}`,
+					'Content-Type': 'application/json'
+				};
+				
+				// Fetch data from the Salesforce API
+				fetch(apiEndpoint, {
+					method: 'GET',
+					headers: headers
+				})
+				.then(response => response.json())  // Convert response to JSON
+				.then(data => {
+					// Handle success and process the data (Accounts)
+					console.log('Accounts retrieved:', data);
+				})
+				.catch(error => {
+					// Handle any errors
+					console.error('Error fetching Accounts:', error);
+				});
+			}
+		
+		// Call the function to retrieve the Accounts
+		getAllAccounts();	
+		
+	</script>
+	<body>
+	Hello This is Working
+	</body>
+</html>
