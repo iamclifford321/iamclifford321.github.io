@@ -2,6 +2,22 @@
 <html>
 <head>
 <title>Test</title>
+<script src="https://cdn.c360a.salesforce.com/beacon/c360a/3f269d46-d5af-41f1-9662-6af0ee55b31c/scripts/c360a.min.js"> </script>
+    <script>
+      
+        SalesforceInteractions.init({
+          consents: [
+            {
+              provider: "Test Provider", 
+              purpose: "Tracking",
+              status: SalesforceInteractions.ConsentStatus.OptIn,
+            },
+          ],
+        }).then(()=>{
+          console.log('init');
+        });
+        console.log(window);
+    </script>
 </head>
 
 <body>
