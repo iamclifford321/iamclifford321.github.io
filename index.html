@@ -1,35 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Test</title>
-<script src="https://cdn.c360a.salesforce.com/beacon/c360a/3f269d46-d5af-41f1-9662-6af0ee55b31c/scripts/c360a.min.js"> </script>
-    <script>
-      
-        SalesforceInteractions.init({
-          consents: [
-            {
-              provider: "Test Provider", 
-              purpose: "Tracking",
-              status: SalesforceInteractions.ConsentStatus.OptIn,
-            },
-          ],
-        }).then(()=>{
-          console.log('init');
-        });
-        console.log(window);
-    </script>
-</head>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
-<body>
-	<table id="table">
-	</table>
-	<br>
-	<br>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
 
-	<label for="">Account Name</label>
-	<input type="text" id="Name">
-	<br>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
 
-	<button onclick="createNewAccount()">Submit me</button> 
-</body>
-</html>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D8d000007XEwl" method="POST">
+
+<input type=hidden name='captcha_settings' value='{"keyname":"Webtocase3","fallback":"true","orgId":"00D8d000007XEwl","ts":""}'>
+<input type=hidden name="orgid" value="00D8d000007XEwl">
+<input type=hidden name="retURL" value="http://">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="sf-development@cloudorca.com">                                   -->
+<!--  ----------------------------------------------------------------------  -->
+
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<div class="g-recaptcha" data-sitekey="6LfMnBglAAAAAMqE5UDhx-OW965c3MD3HIjAZxSZ"></div><br>
+<input type="submit" name="submit">
+
+</form>
